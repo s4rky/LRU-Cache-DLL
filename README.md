@@ -18,7 +18,7 @@ The whole design falls out of taking all three constraints seriously at once. A 
 
 ## The derivation
 
-**Recency is a total ordering, so model it as a line.** If I lay every entry out in a sequence from most-recently-used at the front to least-recently-used at the back, then eviction is just "remove the last element" and promotion is "move this element to the front." A doubly linked list makes both endpoints O(1) and, crucially, lets me *unlink a node from the middle* in O(1), because each node knows its own neighbours, I can splice it out and re-stitch the list without walking to find it.
+If I lay every entry out in a sequence from most-recently-used at the front to least-recently-used at the back, then eviction is just "remove the last element" and promotion is "move this element to the front." A doubly linked list makes both endpoints O(1) and, more importantly, lets me *unlink a node from the middle* in O(1), because each node knows its own neighbours, I can splice it out and re-stitch the list without walking to find it.
 
 **How do I get to the node I want in O(1)?** A linked list alone would force an O(n) scan to find the node for a given key. That's the gap the hash map fills. **The map doesn't store values. Rather, it stores pointers to the nodes themselves.** `key -> Node*`. So a `get` is one hash lookup to land directly on the node, then an O(1) splice to promote it.
 
