@@ -1,7 +1,7 @@
 # Welcome!
 This is my second project on github. Although not as flashy as my previous, this was meant to be a 1 day challenge and a good practice of my fundamentals.
 
-# LRUCache
+# LRU Cache
 <img width="932" height="716" alt="image" src="https://github.com/user-attachments/assets/c7f2c9aa-069e-4541-94cb-b3ab71f1a300" />
 
 An O(1) Least Recently Used (LRU) cache built in C++ from first principles using a doubly linked list (DLL) plus a hash map. Inspired heavily by [LeetCode 146](https://leetcode.com/problems/lru-cache/).
