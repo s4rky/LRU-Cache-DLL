@@ -6,7 +6,7 @@ This is my second project on github. Although not as flashy as my previous, this
 
 An O(1) Least Recently Used (LRU) cache built in C++ from first principles using a doubly linked list (DLL) plus a hash map. Inspired heavily by [LeetCode 146](https://leetcode.com/problems/lru-cache/).
 
-## The problem, restated
+## The problem
 
 An LRU cache has to do three things, all in **O(1)**:
 
